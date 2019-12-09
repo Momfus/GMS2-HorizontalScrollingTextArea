@@ -9,3 +9,4 @@ __boxHeightMax = 150;
 __boxWidthCurrent = __boxWidthMin;
 __boxHeightCurrent = __boxHeightMin; 
 
+__boxTextSurface = noone;

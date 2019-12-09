@@ -6,7 +6,8 @@
     "children": [
         "e6b5fa31-5a26-401a-9733-76719efa0dff",
         "a60f6247-4cb5-42ee-92b5-830eca139d43",
-        "b0561026-9dcd-4d46-b638-ba25b0c34586"
+        "b0561026-9dcd-4d46-b638-ba25b0c34586",
+        "0c132729-f279-4c6f-83b3-4c865b1fc67c"
     ],
     "filterType": "GMObject",
     "folderName": "Slider",
