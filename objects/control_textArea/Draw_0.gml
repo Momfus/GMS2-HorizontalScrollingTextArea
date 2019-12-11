@@ -1,6 +1,5 @@
 /// @description Text Area
 
-
 var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 	l_boxHalfHeight = __boxHeightCurrent * 0.5;
 
@@ -8,8 +7,8 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 
 	draw_set_colour(c_fuchsia);
 	
-	draw_rectangle( global.g_roomWidthHalf - l_boxHalfWidth,
-					global.g_roomHeightHalf - l_boxHalfHeight,
+	draw_rectangle( global.g_roomWidthHalf - l_boxHalfWidth - 1,
+					global.g_roomHeightHalf - l_boxHalfHeight - 1,
 					global.g_roomWidthHalf + l_boxHalfWidth,
 					global.g_roomHeightHalf + l_boxHalfHeight,
 					true 
@@ -25,8 +24,13 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 
 			surface_set_target(__boxTextSurface);
 	
-				draw_set_colour(c_red);	
+				draw_set_colour(c_white);	
 				draw_rectangle(0, 0, __boxWidthCurrent, __boxHeightCurrent, false)
+				
+				draw_set_color(c_black);
+				draw_set_halign(fa_left);
+				draw_set_valign(fa_middle);
+				draw_text(__textCurrentX, l_boxHalfHeight, __currentText );
 	
 			surface_reset_target()
 
@@ -44,7 +48,6 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 		#endregion
 		
 	}
-
 
 
 	// Dibujar la surface en sí

@@ -8,5 +8,5 @@ var l_intensityValue = argument0;
 with( control_textArea ) {
 
 	__boxWidthCurrent = __boxWidthMin + (__boxWidthMax * l_intensityValue);
-	
+	event_user(0); // Re-escalado de surface y posiciones
 }
