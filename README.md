@@ -4,7 +4,7 @@ Ejemplo realizado para manejar texto que se mueve de izquierda a derecha dentro 
 
 ### Características
 
-- Tiene un área donde se dibuja el texto y que sólo se mantendra ahi (no de mostrará fuera del mismo)
+- Tiene un área donde se dibuja el texto y que sólo se mantendra ahi (no se mostrará fuera del mismo)
 - Hay unos sliders para cambiar en tiempo real el ancho y alto del área que se muestra el texto
 
 ## Requerimientos
