@@ -1,5 +1,8 @@
 /// @description Text Area
 
+draw_text( 100, 100, __textCurrentX );
+draw_text( 100, 150, __textCurrentWidth );
+
 var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 	l_boxHalfHeight = __boxHeightCurrent * 0.5;
 
@@ -30,7 +33,7 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 				draw_set_color(c_black);
 				draw_set_halign(fa_left);
 				draw_set_valign(fa_middle);
-				draw_text(__textCurrentX, l_boxHalfHeight, __currentText );
+				draw_text(__textCurrentX, l_boxHalfHeight, __textCurrentShow );
 	
 			surface_reset_target()
 

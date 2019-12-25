@@ -13,9 +13,12 @@ __boxTextSurface = noone;
 
 #region Manejo de la animación del texto
 
-	__currentText = "Texto prueba";
+	__textCurrentIncoming = true;
 
-	__textTargetX = - string_width( __currentText ) ; // definir fuente antes de obtener el ancho en caso de usar diferente al default
+	__textCurrentShow = "Texto prueba";
+	__textCurrentWidth = string_width( __textCurrentShow );
+	
+	__textTargetX = -__textCurrentWidth; // definir fuente antes de obtener el ancho en caso de usar diferente al default
 	__textCurrentX = __boxWidthCurrent;
 	__textSpeed = 1;
 
