@@ -1,8 +1,5 @@
 /// @description Text Area
 
-draw_text( 100, 100, __textCurrentX );
-draw_text( 100, 150, __textCurrentWidth );
-
 var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 	l_boxHalfHeight = __boxHeightCurrent * 0.5;
 
@@ -27,13 +24,25 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 
 			surface_set_target(__boxTextSurface);
 	
+				
 				draw_set_colour(c_white);	
 				draw_rectangle(0, 0, __boxWidthCurrent, __boxHeightCurrent, false)
+	
+	
+				// Lista de textos a pasar
+				if !( ds_list_empty(__textListToMove) ) {
+
+	
+					draw_set_halign(fa_left);
+					draw_set_valign(fa_middle);
+	
+					var l_textToMove = __textListToMove[| 0];
 				
-				draw_set_color(c_black);
-				draw_set_halign(fa_left);
-				draw_set_valign(fa_middle);
-				draw_text(__textCurrentX, l_boxHalfHeight, __textCurrentShow );
+					
+					draw_set_color( l_textToMove[e_textScroll.color] );	
+					draw_text(l_textToMove[e_textScroll.currentX] , l_boxHalfHeight, l_textToMove[e_textScroll.text] );
+	
+				}
 	
 			surface_reset_target()
 
@@ -55,5 +64,37 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 
 	// Dibujar la surface en sí
 	sc_draw_surface_center( __boxTextSurface, global.g_roomWidthHalf, global.g_roomHeightHalf );
+
+#endregion
+
+
+#region @Test
+
+	draw_set_color(c_white);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+
+		
+	if( ds_queue_empty( __textQueueBuffer ) ) {
+	
+		draw_text(10, room_height - 40, "QuequeBuffer Top: undefined" );
+		draw_text(10, room_height - 20, "QueueBuffer Size: empty" );
+	
+	} else {
+
+		
+		var l_auxTextBuffer = ds_queue_head(__textQueueBuffer),
+			l_textStackSizeBuffer = ds_queue_size(__textQueueBuffer);
+
+		draw_text(10, room_height - 40, "QuequeBuffer Top: " + l_auxTextBuffer[0] );
+		draw_text(10, room_height - 20, "QueueBuffer Size: " + string(l_textStackSizeBuffer) );
+		
+	}
+	
+	var l_auxListText = __textListToMove[| 0]
+	draw_text(10, room_height - 60, "ListBuffer Size: " +  string( ds_list_size(__textListToMove) ) );
+	draw_text(10, room_height - 80, "ListBuffer Size: " +  l_auxListText[ e_textScroll.text ] );
+	
+	
 
 #endregion

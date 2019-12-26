@@ -1,27 +1,34 @@
 /// @description Mover texto
 
-#region Manejo del texto que entra y sale
-
-
-if( __textCurrentIncoming  ) {
+if !( ds_list_empty(__textListToMove) ) {
 	
-	 if( __textCurrentX  > 0 ) {
-		__textCurrentIncoming = false;
-		show_debug_message("HOLA >>>>");
-	 }
+	var l_textToMove = __textListToMove[| 0],
+		l_textXCurrent = l_textToMove[e_textScroll.currentX];
+
 	
-} else{
+	#region Manejo del texto que entra y sale
 
-	if( __textCurrentX >= __boxWidthCurrent ) {
+		
 
-		__textCurrentIncoming = true;
-
-	}
+		if( __textCurrentIncoming  ) {
 	
+			 if( l_textXCurrent > 0 ) {
+				__textCurrentIncoming = false;
+			 }
+	
+		} else{
+
+			if( l_textXCurrent >= __boxWidthCurrent ) {
+
+				__textCurrentIncoming = true;
+
+			}
+	
+		}
+
+	#endregion
+
+
+	l_textToMove[@ e_textScroll.currentX] = sc_wrap( l_textXCurrent - __textSpeed, l_textToMove[e_textScroll.targetX], __boxWidthCurrent )
+
 }
-
-
-#endregion
-
-
-__textCurrentX =  sc_wrap(__textCurrentX - __textSpeed, __textTargetX, __boxWidthCurrent )
