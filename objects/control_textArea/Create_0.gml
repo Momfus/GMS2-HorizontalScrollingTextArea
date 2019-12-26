@@ -18,12 +18,13 @@ __boxTextSurface = noone;
 		text, // 0
 		currentX, // 1
 		targetX, // 2
-		color // 3
+		color, // 3
+		inComing // 4 --> Usado para detectar cuando entra y sale del área del texto
 		
 	}
 
 	__texto = "Prueba 1"
-	__textArray = [__texto, __boxWidthCurrent, -string_width( __texto ), c_black ];
+	__textArray = [__texto, __boxWidthCurrent, -string_width( __texto ), c_black, true ];
 
 
 	//FIFO buffer
@@ -34,8 +35,6 @@ __boxTextSurface = noone;
 	__textListToMove =  ds_list_create();
 	ds_list_add(__textListToMove, ds_queue_dequeue(__textQueueBuffer)  );
 
-	// Para manejo de movimiento
-	__textCurrentIncoming = true;
 	__textSpeed = 1;
 
 	

@@ -10,17 +10,23 @@ if !( ds_list_empty(__textListToMove) ) {
 
 		
 
-		if( __textCurrentIncoming  ) {
+		if( l_textToMove[e_textScroll.inComing]  ) {
 	
+			// Al Entrar
 			 if( l_textXCurrent > 0 ) {
-				__textCurrentIncoming = false;
+				 
+				l_textToMove[@ e_textScroll.inComing] = false;
+				show_debug_message("Entrar");
+				
 			 }
 	
 		} else{
 
+			// Al Salir
 			if( l_textXCurrent >= __boxWidthCurrent ) {
 
-				__textCurrentIncoming = true;
+				l_textToMove[@ e_textScroll.inComing]= true;
+				show_debug_message("Salir");
 
 			}
 	
