@@ -23,13 +23,11 @@ __boxTextSurface = noone;
 		
 	}
 	
-	__texto = "Prueba 1"
-	__textArray = [__texto, __boxWidthCurrent, -string_width( __texto ), c_black, true ];
-
-
 	//FIFO buffer
 	__textQueueBuffer = ds_queue_create();
-	ds_queue_enqueue(__textQueueBuffer, __textArray);
+	
+	sc_textBuffer_add_from_params("Prueba 1", c_black);
+	sc_textBuffer_add_from_params("Prueba 2", c_black);
 
 	// Arreglo de texto a mover
 	__textListToMove =  ds_list_create();

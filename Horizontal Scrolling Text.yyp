@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "dc6e28c0-db17-4e27-83ca-639064f9c82a",
+            "Value": {
+                "id": "787d1a78-5619-4a60-8ca2-73d85f17cea3",
+                "resourcePath": "scripts\\sc_textBuffer_add_from_params\\sc_textBuffer_add_from_params.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e6b5fa31-5a26-401a-9733-76719efa0dff",
             "Value": {
                 "id": "e9549368-9007-454b-ad3a-0e6c896481be",
@@ -358,7 +366,8 @@
         "16cb1813-c4d6-4371-bb1d-8e5107dea57a",
         "ff9a57e8-f95e-414a-9136-b50e8f9f0582",
         "6883c445-f548-4e28-ab1a-812e2664250e",
-        "0beb1efb-0bc2-4317-b883-810578544b69"
+        "0beb1efb-0bc2-4317-b883-810578544b69",
+        "dc6e28c0-db17-4e27-83ca-639064f9c82a"
     ],
     "tutorial": ""
 }
