@@ -91,10 +91,21 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 		
 	}
 	
-	var l_auxListText = __textListToMove[| 0]
-	draw_text(10, room_height - 60, "ListBuffer Size: " +  string( ds_list_size(__textListToMove) ) );
-	draw_text(10, room_height - 80, "ListBuffer Size: " +  l_auxListText[ e_textScroll.text ] );
 	
+	var l_auxText = "",
+		l_auxSize = "noone";
+	
+	if !( ds_list_empty(__textListToMove) ) {
+		
+		var l_auxListText = __textListToMove[| 0];
+		
+		l_auxText = l_auxListText[e_textScroll.text];
+		l_auxSize = string( ds_list_size(__textListToMove) );
+	
+	}
+	
+	draw_text(10, room_height - 60, "ListBuffer Size: " +  l_auxSize );
+	draw_text(10, room_height - 80, "ListBuffer Text: " +  l_auxText );
 	
 
 #endregion

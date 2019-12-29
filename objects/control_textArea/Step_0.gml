@@ -16,7 +16,6 @@ if !( ds_list_empty(__textListToMove) ) {
 			 if( l_textXCurrent > 0 ) {
 				 
 				l_textToMove[@ e_textScroll.inComing] = false;
-				show_debug_message("Entrar");
 				
 			 }
 	
@@ -26,7 +25,8 @@ if !( ds_list_empty(__textListToMove) ) {
 			if( l_textXCurrent >= __boxWidthCurrent ) {
 
 				l_textToMove[@ e_textScroll.inComing]= true;
-				show_debug_message("Salir");
+				sc_textBuffer_add_from_textArea();
+				
 
 			}
 	
@@ -35,6 +35,6 @@ if !( ds_list_empty(__textListToMove) ) {
 	#endregion
 
 
-	l_textToMove[@ e_textScroll.currentX] = sc_wrap( l_textXCurrent - __textSpeed, l_textToMove[e_textScroll.targetX], __boxWidthCurrent )
+	l_textToMove[@e_textScroll.currentX] = sc_wrap( l_textXCurrent - __textSpeed, l_textToMove[e_textScroll.targetX], __boxWidthCurrent )
 
 }

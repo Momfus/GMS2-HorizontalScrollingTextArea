@@ -22,7 +22,7 @@ __boxTextSurface = noone;
 		inComing // 4 --> Usado para detectar cuando entra y sale del área del texto
 		
 	}
-
+	
 	__texto = "Prueba 1"
 	__textArray = [__texto, __boxWidthCurrent, -string_width( __texto ), c_black, true ];
 
