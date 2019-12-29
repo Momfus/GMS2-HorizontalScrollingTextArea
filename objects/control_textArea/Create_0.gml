@@ -26,12 +26,13 @@ __boxTextSurface = noone;
 	//FIFO buffer
 	__textQueueBuffer = ds_queue_create();
 	
-	sc_textBuffer_add_from_params("Prueba 1", c_black);
-	sc_textBuffer_add_from_params("Prueba 2", c_black);
+	sc_textBuffer_add_from_params("1er Texto", c_black);
+	sc_textBuffer_add_from_params("2do Texto", c_red);
+	sc_textBuffer_add_from_params("3er Texto", c_blue);
 
 	// Arreglo de texto a mover
 	__textListToMove =  ds_list_create();
-	ds_list_add(__textListToMove, ds_queue_dequeue(__textQueueBuffer)  );
+	sc_textBuffer_remove_to_textArea();
 
 	__textSpeed = 1;
 

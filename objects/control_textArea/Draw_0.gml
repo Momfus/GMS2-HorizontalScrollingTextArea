@@ -67,45 +67,51 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 
 #endregion
 
-
 #region @Test
 
 	draw_set_color(c_white);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 
-		
-	if( ds_queue_empty( __textQueueBuffer ) ) {
+	#region Información del buffer
 	
-		draw_text(10, room_height - 40, "QuequeBuffer Top: undefined" );
-		draw_text(10, room_height - 20, "QueueBuffer Size: empty" );
+		if( ds_queue_empty( __textQueueBuffer ) ) {
 	
-	} else {
+			draw_text(10, room_height - 40, "QuequeBuffer Top: undefined" );
+			draw_text(10, room_height - 20, "QueueBuffer Size: empty" );
+	
+		} else {
 
 		
-		var l_auxTextBuffer = ds_queue_head(__textQueueBuffer),
-			l_textStackSizeBuffer = ds_queue_size(__textQueueBuffer);
+			var l_auxTextBuffer = ds_queue_head(__textQueueBuffer),
+				l_textStackSizeBuffer = ds_queue_size(__textQueueBuffer);
 
-		draw_text(10, room_height - 40, "QuequeBuffer Top: " + l_auxTextBuffer[0] );
-		draw_text(10, room_height - 20, "QueueBuffer Size: " + string(l_textStackSizeBuffer) );
+			draw_text(10, room_height - 40, "QuequeBuffer Top: " + l_auxTextBuffer[0] );
+			draw_text(10, room_height - 20, "QueueBuffer Size: " + string(l_textStackSizeBuffer) );
 		
-	}
+		}
 	
+	#endregion
 	
-	var l_auxText = "",
-		l_auxSize = "noone";
+	#region Información de la lista de texto a mover
 	
-	if !( ds_list_empty(__textListToMove) ) {
+		var l_auxText = "",
+			l_auxSize = "noone";
+	
+		if !( ds_list_empty(__textListToMove) ) {
 		
-		var l_auxListText = __textListToMove[| 0];
+			var l_auxListText = __textListToMove[| 0];
 		
-		l_auxText = l_auxListText[e_textScroll.text];
-		l_auxSize = string( ds_list_size(__textListToMove) );
+			l_auxText = l_auxListText[e_textScroll.text];
+			l_auxSize = string( ds_list_size(__textListToMove) );
 	
-	}
+		}
 	
-	draw_text(10, room_height - 60, "ListBuffer Size: " +  l_auxSize );
-	draw_text(10, room_height - 80, "ListBuffer Text: " +  l_auxText );
+		draw_text(10, room_height - 60, "ListBuffer Size: " +  l_auxSize );
+		draw_text(10, room_height - 80, "ListBuffer Text: " +  l_auxText );
+	
+	#endregion
+	
 	
 
 #endregion

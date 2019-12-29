@@ -11,6 +11,7 @@ if !( ds_queue_empty(__textQueueBuffer) ) {
 	
 	l_auxTextArray[@e_textScroll.currentX] = __boxWidthCurrent;
 	
+	
 	ds_list_add(__textListToMove, l_auxTextArray);
 
 }

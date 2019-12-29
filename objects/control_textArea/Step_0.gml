@@ -8,8 +8,6 @@ if !( ds_list_empty(__textListToMove) ) {
 	
 	#region Manejo del texto que entra y sale
 
-		
-
 		if( l_textToMove[e_textScroll.inComing]  ) {
 	
 			// Al Entrar
@@ -22,11 +20,10 @@ if !( ds_list_empty(__textListToMove) ) {
 		} else{
 
 			// Al Salir
-			if( l_textXCurrent >= __boxWidthCurrent ) {
-
+			if( l_textXCurrent <= l_textToMove[e_textScroll.targetX]) {
+				show_message("-----------------")
 				l_textToMove[@ e_textScroll.inComing]= true;
-				sc_textBuffer_add_from_textArea();
-				
+				sc_textBuffer_add_from_textArea();				
 
 			}
 	
