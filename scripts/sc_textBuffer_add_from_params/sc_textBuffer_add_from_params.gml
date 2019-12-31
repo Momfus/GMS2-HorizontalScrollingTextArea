@@ -7,9 +7,11 @@
 
 var l_text = argument0 + " // ",
 	l_color = argument1,
+	l_widthText = string_width( l_text ),
 	l_textArray =	[	l_text,
+						l_widthText,
 						__boxWidthCurrent,
-						-string_width( l_text ),
+						-l_widthText,
 						l_color,
 						true
 					];

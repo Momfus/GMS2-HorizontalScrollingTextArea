@@ -16,10 +16,11 @@ __boxTextSurface = noone;
 	enum e_textScroll {
 	
 		text, // 0
-		currentX, // 1
-		targetX, // 2
-		color, // 3
-		inComing // 4 --> Usado para detectar cuando entra y sale del área del texto
+		width, // 1
+		currentX, // 2
+		targetX, // 3
+		color, // 4
+		inComing // 5 --> Usado para detectar cuando entra y sale del área del texto
 		
 	}
 	

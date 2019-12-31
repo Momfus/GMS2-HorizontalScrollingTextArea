@@ -23,8 +23,5 @@ var l_listMoveSize = ds_list_size(__textListToMove),
 if( surface_exists( __boxTextSurface ) ) {
 	surface_resize(__boxTextSurface, __boxWidthCurrent, __boxHeightCurrent);
 	
-show_debug_message( surface_get_width(__boxTextSurface) );
-show_debug_message(l_textToMove[@ e_textScroll.currentX])
-show_debug_message(l_textToMove[@ e_textScroll.targetX])
 }
 

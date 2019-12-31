@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "3d335654-3349-4b1b-a60d-152b718d4223",
+            "Value": {
+                "id": "ab61fae4-b78b-4242-b982-87dc1ccfecc1",
+                "resourcePath": "notes\\TODO List.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "40f3a6c2-3d40-47fd-a8d2-c22a37b6662c",
             "Value": {
                 "id": "ae4bbd2d-e4e4-4ed8-b198-3ed3deb09135",

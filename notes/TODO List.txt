@@ -1,0 +1,27 @@
+************************
+****	TODO LIST	****
+************************
+
+> Texto al terminar de entrar debe llamar al siguiente del buffer para que comience a pasar (si hay)
+
+> Bandera duplicado:
+
+			- Cada texto tiene una bandera de "duplicado"
+			- Esta bandera indica si el texto se esta pasando mas de una vez
+			- Una vez que el texto termina de entrar a la psarela, si busca para agregar otro texto y no hay: 
+						-> Toma el que esta en la cabeza de la lista en movimiento 
+							--> Si NO TIENE la bandera "duplicado" activado
+								-> Señala que va a usarse nuevamente (activa la bandera "duplicado")
+								-> Lo coloca en la pasarela.
+							--> CASO CONTRARIO:
+								--> Busca el siguiente que haya en la lista y repete el proceso
+										--> NOTA: Debe verificar que la lista no este vacia pero como en el peor de los casos seria el mismo mensaje repitiendose uno tras otro
+										
+										
+> Ingresar texto de forma asincron por un evento del usuario
+
+> Pausa de evento especial:
+	--> En caso de que haya una cinemática y quiera luego reanudarse donde estaba (¿arreglando con un simple archivo save o guardar en un buffer persitente ?)
+
+> BANDERA PRIORIDAD
+	--> En caso de un mensaje más importante entrante ¿Agregar un atributo de prioridad al texto?
