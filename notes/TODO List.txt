@@ -4,6 +4,8 @@
 
 > Texto al terminar de entrar debe llamar al siguiente del buffer para que comience a pasar (si hay)
 
+> Al cambiar el tamaño en tiempo real del surface y se supera el limite del texto entrando, se superpone y no estan correctamente distanciados.
+
 > Bandera duplicado:
 
 			- Cada texto tiene una bandera de "duplicado"

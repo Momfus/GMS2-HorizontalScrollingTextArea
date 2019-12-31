@@ -1,4 +1,4 @@
-///@function sc_set_textAreaValueWidth(intensityValue)
+///@function sc_textArea_set_width(intensityValue)
 ///@description					-	Asigna el nuevo valor al ancho de la caja de texto con los controles necesarios.
 ///@param {real} intensityValue	-	Valor entre 0 y 1
 ///@return {void}

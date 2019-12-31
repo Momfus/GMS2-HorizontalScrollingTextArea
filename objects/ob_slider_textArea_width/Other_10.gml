@@ -1,3 +1,3 @@
 /// @description Slider change Value
 
-sc_set_textAreaValueWidth( __sliderValueCurrent );
+sc_textArea_set_width( __sliderValueCurrent );

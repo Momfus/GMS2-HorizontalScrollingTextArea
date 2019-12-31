@@ -4,5 +4,5 @@
 event_inherited();
 
 // Propio
-
+__sliderValueCurrent = 1; // Sobreescribiendo para testear
 __sliderTitle  = "Ancho";

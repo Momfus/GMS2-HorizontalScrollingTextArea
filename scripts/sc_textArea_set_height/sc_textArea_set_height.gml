@@ -1,4 +1,4 @@
-///@function sc_set_textAreaValueHeight(intensityValue)
+///@function sc_textArea_set_height(intensityValue)
 ///@description					-	Asigna el nuevo valor al alto de la caja de texto con los controles necesarios.
 ///@param {real} intensityValue	-	Valor entre 0 y 1
 ///@return {void}

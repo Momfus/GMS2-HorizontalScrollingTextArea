@@ -2,46 +2,63 @@
 
 if !( ds_list_empty(__textListToMove) ) {
 	
-	var l_textToMove = __textListToMove[| 0],
-		l_textXCurrent = l_textToMove[e_textScroll.currentX];
-
 	
-	#region Manejo del texto que entra y sale
-
-		if( l_textToMove[e_textScroll.inComing]  ) {
+	var l_textToMove = undefined,
+		l_textXCurrent = undefined,
+		l_textListSize = ds_list_size( __textListToMove );
 	
-			#region Evento al terminar de ENTRAR
+	
+	#region Mover cada texto de la lista
+	
+		for( var i = 0; i < l_textListSize; i++ ) {
+	
+			l_textToMove = __textListToMove[| i];
+			l_textXCurrent = l_textToMove[e_textScroll.currentX];
+	
+			#region Manejo del texto que entra y sale
+
+				if( l_textToMove[e_textScroll.inComing]  ) {
+	
+					#region Evento al terminar de ENTRAR
 			
-				var l_textInsideAllX = __boxWidthCurrent - l_textToMove[e_textScroll.width];
+						var l_textInsideAllX = __boxWidthCurrent - l_textToMove[e_textScroll.width];
 			
-				if( l_textXCurrent < l_textInsideAllX ) {
+						if( l_textXCurrent < l_textInsideAllX ) {
 				 
-					l_textToMove[@ e_textScroll.inComing] = false;
-				
-				
-				}
+							l_textToMove[@ e_textScroll.inComing] = false;
+							sc_textBuffer_remove_to_textArea();
+											
+						}
 			
-			#endregion
+					#endregion
 	
-		} else{
+				} else{
 
-			#region Evento al terminar de SALIR
+					#region Evento al terminar de SALIR
 			
-				if( l_textXCurrent <= l_textToMove[e_textScroll.targetX]) {
+						if( l_textXCurrent <= l_textToMove[e_textScroll.targetX]) {
 		
-					l_textToMove[@ e_textScroll.inComing]= true;
-					sc_textBuffer_add_from_textArea();				
+							l_textToMove[@ e_textScroll.inComing]= true;
+							sc_textBuffer_add_from_textArea();	
+							
+							// Al quitar un elemento, se reduce el indice y tamaño de la lista del ciclo for
+							i--;
+							l_textListSize--;
+							continue;
 
-				}
+						}
 			
-			#endregion
+					#endregion
 			
 	
+				}
+
+			#endregion
+
+			l_textToMove[@e_textScroll.currentX] = l_textXCurrent - __textSpeed;
+		
 		}
-
+		
 	#endregion
-
-
-	l_textToMove[@e_textScroll.currentX] = l_textXCurrent - __textSpeed;
 
 }

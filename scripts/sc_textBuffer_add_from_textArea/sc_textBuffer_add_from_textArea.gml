@@ -1,5 +1,5 @@
 ///@function sc_textBuffer_add_from_textArea()
-///@description Agrega al buffer  lo que sale de la pasarela de texto
+///@description Agrega al buffer  o que sale de la pasarela de texto
 ///@rerturn {void}
 
 // En caso de que la lista este vacia, se busca en el buffer para agregar al área del texto

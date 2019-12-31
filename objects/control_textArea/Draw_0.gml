@@ -35,13 +35,23 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 	
 					draw_set_halign(fa_left);
 					draw_set_valign(fa_middle);
-	
-					var l_textToMove = __textListToMove[| 0];
-				
 					
-					draw_set_color( l_textToMove[e_textScroll.color] );	
-					draw_text(l_textToMove[e_textScroll.currentX] , l_boxHalfHeight, l_textToMove[e_textScroll.text] );
+					#region Dibujar texto en pasarela
+					
+						var l_textToMove = undefined,
+							l_textListSize = ds_list_size( __textListToMove );
+					
+						for( var i = 0; i < l_textListSize; i++ ) {
+						
+							l_textToMove = __textListToMove[| i];
+					
+							draw_set_color( l_textToMove[e_textScroll.color] );	
+							draw_text(l_textToMove[e_textScroll.currentX] , l_boxHalfHeight, l_textToMove[e_textScroll.text] );
 	
+						}
+					
+					#endregion
+					
 				}
 	
 			surface_reset_target()
@@ -96,18 +106,18 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 	#region Información de la lista de texto a mover
 	
 		var l_auxText = "",
-			l_auxSize = "noone";
+			l_auxTextSize = "noone";
 	
 		if !( ds_list_empty(__textListToMove) ) {
 		
-			var l_auxListText = __textListToMove[| 0];
+			var l_textToMove = __textListToMove[| 0];
 		
-			l_auxText = l_auxListText[e_textScroll.text];
-			l_auxSize = string( ds_list_size(__textListToMove) );
+			l_auxText = l_textToMove[e_textScroll.text];
+			l_auxTextSize = string( ds_list_size(__textListToMove) );
 	
 		}
 	
-		draw_text(10, room_height - 60, "ListBuffer Size: " +  l_auxSize );
+		draw_text(10, room_height - 60, "ListBuffer Size: " +  l_auxTextSize );
 		draw_text(10, room_height - 80, "ListBuffer Text: " +  l_auxText );
 	
 	#endregion

@@ -1,9 +1,9 @@
-///@function sc_textBuffer_add_from_textArea()
+///@function sc_textBuffer_remove_to_textArea()
 ///@description Quita del buffer para colocar en la pasarela de texto.
 ///@rerturn {void}
 
 
-show_debug_message("Entrar");
+show_debug_message("Nuevo texto entrando");
 
 if !( ds_queue_empty(__textQueueBuffer) ) {
 
