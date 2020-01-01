@@ -1,17 +1,18 @@
-///@function sc_textArea_is_coming_text()
+///@function sc_textArea_is_incoming_text()
 ///@description			-	Verifica si la lista que está moviendose en la pasarela, tiene algun texto entrando aún.
 ///@return {boolean}
 
-var l_isCommingText = false,
+var l_isIncomingText = false,
 	l_textMoveSize = ds_list_size(__textListToMove),
-	l_auxTextComming = undefined;
+	l_auxTextComing = undefined;
 
 for( var i = 0; i < l_textMoveSize; i++ ) {
 
-	l_auxTextComming = __textListToMove[| i];
-	if !( l_auxTextComming[e_textScroll.inComing] ) {
+	l_auxTextComing = __textListToMove[| i];
 	
-		l_isCommingText = true;
+	if ( l_auxTextComing[e_textScroll.incoming] ) {
+	
+		l_isIncomingText = true;
 		break;
 	
 	}
@@ -19,4 +20,4 @@ for( var i = 0; i < l_textMoveSize; i++ ) {
 }
 
 
-return l_isCommingText;
+return l_isIncomingText;

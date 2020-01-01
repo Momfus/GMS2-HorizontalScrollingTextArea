@@ -17,7 +17,7 @@ if !( ds_list_empty(__textListToMove) ) {
 	
 			#region Manejo del texto que entra y sale
 
-				if( l_textToMove[e_textScroll.inComing]  ) {
+				if( l_textToMove[e_textScroll.incoming]  ) {
 	
 					#region Evento al terminar de ENTRAR
 			
@@ -25,7 +25,7 @@ if !( ds_list_empty(__textListToMove) ) {
 			
 						if( l_textXCurrent < l_textInsideAllX ) {
 				 
-							l_textToMove[@ e_textScroll.inComing] = false;
+							l_textToMove[@ e_textScroll.incoming] = false;
 							sc_textBuffer_remove_to_textArea();
 											
 						}
@@ -38,7 +38,7 @@ if !( ds_list_empty(__textListToMove) ) {
 			
 						if( l_textXCurrent <= l_textToMove[e_textScroll.targetX]) {
 		
-							l_textToMove[@ e_textScroll.inComing]= true;
+							l_textToMove[@ e_textScroll.incoming]= true;
 							sc_textBuffer_add_from_textArea();	
 							
 							// Al quitar un elemento, se reduce el indice y tamaño de la lista del ciclo for

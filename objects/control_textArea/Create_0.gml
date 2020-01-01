@@ -20,7 +20,7 @@ __boxTextSurface = noone;
 		currentX, // 2
 		targetX, // 3
 		color, // 4
-		inComing // 5 --> Usado para detectar cuando entra y sale del área del texto
+		incoming // 5 --> Usado para detectar cuando entra y sale del área del texto
 		
 	}
 	
