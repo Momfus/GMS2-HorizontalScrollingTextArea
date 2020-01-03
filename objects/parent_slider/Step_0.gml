@@ -27,8 +27,11 @@ if( !mouse_check_button(mb_left) ) {
 if( __sliderSelected ) {
 	
 	var l_barNewValue = (mouse_x - x) / sprite_width; // Obtengo la posición relativa en que esta el mouse y divido para obtener el valor de 0 a 1
-	__sliderValueCurrent = clamp( l_barNewValue, 0, __sliderValueMax );
 	
-	event_user(0); // Esto lo maneja cada hijo del objeto
+	if( l_barNewValue != __sliderValueCurrent ) {
+		__sliderValueCurrent = clamp( l_barNewValue, 0, __sliderValueMax );
+		event_user(0); // Esto lo maneja cada hijo del objeto
+	}
+	
 	
 }
