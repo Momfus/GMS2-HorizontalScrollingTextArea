@@ -11,11 +11,17 @@ show_debug_message("Salir");
 var l_auxTempToAdd = __textListToMove[| l_index];
 	
 ds_list_delete(__textListToMove, l_index);
-ds_queue_enqueue(__textQueueBuffer, l_auxTempToAdd);
 
-// Si no hay un texto entrante, se envia el mismo que acaba de sacarse
-if !(sc_textArea_is_incoming_text() ) {
+// Solor agregar al buffer en caso de no estar duplicado el mismo
+if !( l_auxTempToAdd[ e_textScroll.duplicated ] ) { 
 
-	sc_textBuffer_remove_to_textArea();	
+	ds_queue_enqueue(__textQueueBuffer, l_auxTempToAdd);
+
+	// Si no hay un texto entrante, se envia el mismo que acaba de sacarse
+	if !(sc_textArea_is_incoming_text() ) {
+
+		sc_textBuffer_remove_to_textArea();	
+
+	}
 
 }

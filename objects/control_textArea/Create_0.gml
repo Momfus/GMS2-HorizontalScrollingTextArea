@@ -20,7 +20,8 @@ __boxTextSurface = noone;
 		currentX, // 2
 		targetX, // 3
 		color, // 4
-		incoming // 5 --> Usado para detectar cuando entra y sale del área del texto
+		incoming, // 5 --> Usado para detectar cuando entra y sale del área del texto
+		duplicated // 6 --> Se activa si el mismo texto se vuelve a usar en la misma pasarela de texto.
 		
 	}
 	
@@ -28,8 +29,6 @@ __boxTextSurface = noone;
 	__textQueueBuffer = ds_queue_create();
 	
 	sc_textBuffer_add_from_params("1er Texto", c_black);
-	sc_textBuffer_add_from_params("2do Texto", c_red);
-	sc_textBuffer_add_from_params("3er Texto", c_blue);
 
 	// Arreglo de texto a mover
 	__textListToMove =  ds_list_create();

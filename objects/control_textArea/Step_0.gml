@@ -26,7 +26,13 @@ if !( ds_list_empty(__textListToMove) ) {
 						if( l_textXCurrent < l_textInsideAllX ) {
 				 
 							l_textToMove[@ e_textScroll.incoming] = false;
-							sc_textBuffer_remove_to_textArea();
+							
+							// Si el buffer està vacio, usar texto duplicado comenzando desde la cabeza de la lista
+							if ( sc_textBuffer_remove_to_textArea() ) {
+								
+								sc_textArea_duplicate();
+								
+							}
 											
 						}
 			

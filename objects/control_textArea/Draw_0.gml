@@ -47,7 +47,7 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 					
 							draw_set_color( l_textToMove[e_textScroll.color] );	
 							draw_text(l_textToMove[e_textScroll.currentX] , l_boxHalfHeight, l_textToMove[e_textScroll.text] );
-	
+							
 						}
 					
 					#endregion

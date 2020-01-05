@@ -2,20 +2,7 @@
 ****	TODO LIST	****
 ************************
 
-> Bandera duplicado:
 
-			- Cada texto tiene una bandera de "duplicado"
-			- Esta bandera indica si el texto se esta pasando mas de una vez
-			- Una vez que el texto termina de entrar a la pasarela, si busca para agregar otro texto y no hay: 
-						-> Toma el que esta en la cabeza de la lista en movimiento 
-							--> Si NO TIENE la bandera "duplicado" activado
-								-> Señala que va a usarse nuevamente (activa la bandera "duplicado")
-								-> Lo coloca en la pasarela.
-							--> CASO CONTRARIO:
-								--> Busca el siguiente que haya en la lista y repete el proceso
-										--> NOTA: Debe verificar que la lista no este vacia pero como en el peor de los casos seria el mismo mensaje repitiendose uno tras otro
-										
-										
 > Ingresar texto de forma asincrona por un evento del usuario
 
 > Pausa de evento especial:

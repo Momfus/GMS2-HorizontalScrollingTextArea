@@ -1,9 +1,11 @@
 ///@function sc_textBuffer_remove_to_textArea()
-///@description Quita del buffer para colocar en la pasarela de texto.
-///@rerturn {void}
+///@description			Quita del buffer para colocar en la pasarela de texto.
+///@return {boolean}	bufferEmpty
 
 
 show_debug_message("Nuevo texto entrando");
+
+var l_bufferEmpty = false;
 
 if !( ds_queue_empty(__textQueueBuffer) ) {
 
@@ -14,4 +16,10 @@ if !( ds_queue_empty(__textQueueBuffer) ) {
 	
 	ds_list_add(__textListToMove, l_auxTextArray);
 
+} else {
+
+	l_bufferEmpty = true;
+	
 }
+
+return l_bufferEmpty;
