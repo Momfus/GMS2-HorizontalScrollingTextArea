@@ -8,9 +8,9 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 	draw_set_colour(c_fuchsia);
 	
 	draw_rectangle( global.g_roomWidthHalf - l_boxHalfWidth - 1,
-					global.g_roomHeightHalf - l_boxHalfHeight - 1,
+					global.g_roomHeightHalf - l_boxHalfHeight - 1 + __boxOffsetY,
 					global.g_roomWidthHalf + l_boxHalfWidth,
-					global.g_roomHeightHalf + l_boxHalfHeight,
+					global.g_roomHeightHalf + l_boxHalfHeight + __boxOffsetY,
 					true 
 				  );
 	
@@ -73,7 +73,7 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 
 
 	// Dibujar la surface en sí
-	sc_draw_surface_center( __boxTextSurface, global.g_roomWidthHalf, global.g_roomHeightHalf );
+	sc_draw_surface_center( __boxTextSurface, global.g_roomWidthHalf, global.g_roomHeightHalf + __boxOffsetY );
 
 #endregion
 
@@ -87,8 +87,8 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 	
 		if( ds_queue_empty( __textQueueBuffer ) ) {
 	
-			draw_text(10, room_height - 40, "QuequeBuffer Top: undefined" );
-			draw_text(10, room_height - 20, "QueueBuffer Size: empty" );
+			draw_text(10, room_height - 100 + __boxOffsetY, "QuequeBuffer Top: undefined" );
+			draw_text(10, room_height - 80 + __boxOffsetY, "QueueBuffer Size: empty" );
 	
 		} else {
 
@@ -96,8 +96,8 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 			var l_auxTextBuffer = ds_queue_head(__textQueueBuffer),
 				l_textStackSizeBuffer = ds_queue_size(__textQueueBuffer);
 
-			draw_text(10, room_height - 40, "QuequeBuffer Top: " + l_auxTextBuffer[0] );
-			draw_text(10, room_height - 20, "QueueBuffer Size: " + string(l_textStackSizeBuffer) );
+			draw_text(10, room_height - 100 + __boxOffsetY, "QuequeBuffer Top: " + l_auxTextBuffer[0] );
+			draw_text(10, room_height - 80 + __boxOffsetY, "QueueBuffer Size: " + string(l_textStackSizeBuffer) );
 		
 		}
 	
@@ -116,9 +116,9 @@ var l_boxHalfWidth = __boxWidthCurrent * 0.5,
 			l_auxTextSize = string( ds_list_size(__textListToMove) );
 	
 		}
-	
-		draw_text(10, room_height - 60, "ListBuffer Size: " +  l_auxTextSize );
-		draw_text(10, room_height - 80, "ListBuffer Text: " +  l_auxText );
+		
+		draw_text(10, room_height - 140 + __boxOffsetY, "ListBuffer Text: " +  l_auxText );
+		draw_text(10, room_height -120 + __boxOffsetY, "ListBuffer Size: " +  l_auxTextSize );
 	
 	#endregion
 	

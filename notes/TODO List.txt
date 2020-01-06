@@ -3,7 +3,6 @@
 ************************
 
 
-> Ordenar mejor el ingreso del usuario
 > Dar un maximo a almacenar, quitando los màs de la lista
 
 > Pausa de evento especial:

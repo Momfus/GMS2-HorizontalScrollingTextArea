@@ -17,5 +17,4 @@ var l_text = argument0 + " // ",
 						false				// duplicated
 					];
 
-
 ds_queue_enqueue(__textQueueBuffer, l_textArray);

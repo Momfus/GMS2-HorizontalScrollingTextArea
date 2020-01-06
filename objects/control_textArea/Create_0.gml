@@ -3,13 +3,15 @@
 __boxWidthMin = 200;
 __boxHeightMin = 50;
 
-__boxWidthMax = 420;
+__boxWidthMax = 500;
 __boxHeightMax = 100;
 
 __boxWidthCurrent = __boxWidthMin;
 __boxHeightCurrent = __boxHeightMin; 
 
 __boxTextSurface = noone;
+
+__boxOffsetY = -80;
 
 #region Manejo de la lista de textos
 
@@ -28,7 +30,6 @@ __boxTextSurface = noone;
 	//FIFO buffer
 	__textQueueBuffer = ds_queue_create();
 	
-	sc_textBuffer_add_from_params("1er Texto", c_black);
 
 	// Arreglo de texto a mover
 	__textListToMove =  ds_list_create();
