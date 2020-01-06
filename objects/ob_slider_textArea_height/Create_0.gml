@@ -5,4 +5,4 @@ event_inherited();
 
 // Propio
 
-__sliderTitle  = "Alto";
+__sliderTitle  = "Surface Height";

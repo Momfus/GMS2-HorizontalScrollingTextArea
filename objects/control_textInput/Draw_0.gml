@@ -11,7 +11,7 @@
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
 	
-	draw_text(global.g_roomWidthHalf, __textInfoBoxY + 5, "ESCRIBE Y PRESIONA ENTER PARA AGREGAR TEXTO\n(los colores son elegidos de forma aleatoria)");
+	draw_text(global.g_roomWidthHalf, __textInfoBoxY + 5, "WRITE AND PRESS ENTER TO ADD TEXT INTO SURFACE\n(colors are chosen randomly)");
 	
 #endregion
 

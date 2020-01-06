@@ -4,4 +4,4 @@
 event_inherited();
 
 // Propio
-__sliderTitle  = "Ancho";
+__sliderTitle  = "Surface Width";
