@@ -29,7 +29,7 @@ __boxOffsetY = -80;
 	
 	//FIFO buffer
 	__textQueueBuffer = ds_queue_create();
-	
+	__textQueueBufferMax = 10;
 
 	// Arreglo de texto a mover
 	__textListToMove =  ds_list_create();

@@ -2,9 +2,6 @@
 ****	TODO LIST	****
 ************************
 
-
-> Dar un maximo a almacenar, quitando los màs de la lista
-
 > Pausa de evento especial:
 	--> En caso de que haya una cinemática y quiera luego reanudarse donde estaba (¿arreglando con un simple archivo save o guardar en un buffer persitente ?)
 

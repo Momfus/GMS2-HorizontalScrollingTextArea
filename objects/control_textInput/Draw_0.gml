@@ -21,13 +21,18 @@
 	// Cuadro de input
 	draw_set_color(c_white)
 	draw_rectangle( __textInputBoxX, __textInputBoxY, __textInputBoxWidth, __textInputBoxHeight, false )
-
-	draw_set_colour(c_black);
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_center);
+	
+	draw_set_color(c_fuchsia);
+	draw_rectangle(__textInputBoxX - 1, __textInputBoxY - 1, __textInputBoxWidth + 1, __textInputBoxHeight + 1, true);
+	
+	
 
 
 	// Texto del usuario
+	
+	draw_set_colour(c_black);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_center);
 	draw_text(__textInputBoxIni, __textInputBoxY + __textInputBoxHeightHalf, __textInputUserCurrent);
 
 
