@@ -44,7 +44,7 @@ if !( ds_list_empty(__textListToMove) ) {
 			
 						if( l_textXCurrent <= l_textToMove[e_textScroll.targetX]) {
 		
-							l_textToMove[@ e_textScroll.incoming]= true;
+							l_textToMove[@ e_textScroll.incoming] = true;
 							sc_textBuffer_add_from_textArea(0);	
 							
 							// Al quitar un elemento, se reduce el indice y tamaño de la lista del ciclo for
