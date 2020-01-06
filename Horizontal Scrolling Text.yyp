@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "7e89a897-7280-4628-910e-8fd811b386d6",
+            "Value": {
+                "id": "9ae8d31e-8dba-4421-80da-b3fa8e543ce8",
+                "resourcePath": "objects\\control_textInput\\control_textInput.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9eeef9a0-40f9-4965-954a-8449586fd951",
             "Value": {
                 "id": "137ccb12-723b-4e96-b5c6-c817fbb7849a",

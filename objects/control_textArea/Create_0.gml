@@ -1,12 +1,12 @@
 /// @description Iniciar Atributos
 
-__boxWidthMin = 100;
+__boxWidthMin = 200;
 __boxHeightMin = 50;
 
-__boxWidthMax = 300;
-__boxHeightMax = 150;
+__boxWidthMax = 420;
+__boxHeightMax = 100;
 
-__boxWidthCurrent = __boxWidthMax// __boxWidthMin;
+__boxWidthCurrent = __boxWidthMin;
 __boxHeightCurrent = __boxHeightMin; 
 
 __boxTextSurface = noone;
