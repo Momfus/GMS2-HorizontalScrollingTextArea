@@ -9,5 +9,5 @@ Ejemplo realizado para manejar texto que se mueve de izquierda a derecha dentro 
 
 ## Requerimientos
 
-- Tener instalado GMS2
+- Tener instalado GMS2 (previo a 2.3)
 - Puede configurarse desde el source control o clonar el mismo directamente.
